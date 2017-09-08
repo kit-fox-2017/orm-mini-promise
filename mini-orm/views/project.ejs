@@ -5,13 +5,18 @@
     <title></title>
   </head>
   <body>
+    <form class="" action="/project" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="status" placeholder="status">
+      <button type="submit" name="submit">Tambah</button>
+    </form>
 
-    <table>
+    <table border="2">
       <tr>
         <th>ID</th>
         <th>NAME</th>
         <th>status</th>
-        <th>Action</th>
+        <th colspan="2">Action</th>
       </tr>
       <% dtProject.forEach(data=>{ %>
         <tr>
