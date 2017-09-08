@@ -1,7 +1,7 @@
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('./db/database.db');
 
-class ModelProfile {
+class ModelProject {
   constructor(raw) {
     this.attribute1 = raw.attribute1
     this.attribute2 = raw.attribute2
@@ -27,4 +27,4 @@ class ModelProfile {
 
 }
 
-module.exports = ModelProfile
+module.exports = ModelProject
