@@ -8,10 +8,11 @@ class ModelProject {
   }
 
   static findAll(cb) {
-    db.all(`SELECT * FROM project`,(err, dataProject)={
-      let results = dataProject.map(m => new ModelProfile(m))
-      console.log(results);
-      cb(results)
+    db.all(`SELECT * FROM project`, (err, dataProject)=>{
+      // let results = dataProject.map(m => new ModelProfile(m))
+      // console.log(results);
+      // cb(results)
+      cb(dataProject)
     })
   }
 
