@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/project" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="status" placeholder="status">
+      <button type="submit" name="submit">Tambah</button>
+    </form>
+
+    <table border="2">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>status</th>
+        <th colspan="2">Action</th>
+      </tr>
+      <% dtProject.forEach(data=>{ %>
+        <tr>
+          <td><%= data.id %></td>
+          <td><%= data.name %></td>
+          <td><%= data.status %></td>
+          <td>
+            <a href="/project/edit/<%= data.id %>">edit</a>
+          </td>
+          <td>
+            <a href="/project/delete/<%= data.id %>">Delete</a>
+          </td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
